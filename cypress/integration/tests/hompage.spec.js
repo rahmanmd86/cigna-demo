@@ -1,15 +1,16 @@
 /// <reference types="cypress" />
 
+import Homepage from '../../pages/Homepage.js'
+
+const homepage = new Homepage();
+
 describe('Homepage', () => {
     before(() => {
-        cy.visit(Cypress.config().baseUrl);
+        homepage.visit();
     });
 
     it('displays brand icon', () => {
-        cy.get('a#nava img').should('be.visible');
+        homepage.getLogo().should('be.visible');
     });
-
-    
-
 
 });
