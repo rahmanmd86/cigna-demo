@@ -1,0 +1,15 @@
+{
+  "name": "cigna_demo",
+  "version": "1.0.0",
+  "description": "Demo of test framework for Cigna with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cy",
+    "cy:open": "cypress open"
+  },
+  "author": "Md Mahbubur Rahman",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.2.0"
+  }
+}
