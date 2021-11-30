@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "cy",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:headless": "cypress run"
   },
   "author": "Md Mahbubur Rahman",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.2.0",
     "cypress-image-snapshot": "^4.0.1"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
   }
 }

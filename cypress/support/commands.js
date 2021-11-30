@@ -27,3 +27,7 @@
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 
 addMatchImageSnapshotCommand();
+
+Cypress.Commands.add("text", { prevSubject: true}, (subject, options) => {
+    return subject.text();
+  });

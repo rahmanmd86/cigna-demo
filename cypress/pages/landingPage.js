@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import {LOGO, NAV_LINKS, ITEMS} from '../constants/landingPageConstants';
+
 export class LandingPage {
 
     visit() {
@@ -7,26 +9,23 @@ export class LandingPage {
     }
 
     logo() {
-        return cy.get(`a[id=nava]`)
+        return cy.get(LOGO);
     }
 
-    navigationLinks() {
-        return cy.get(`a[class='nav-link']`)
-    }
-
-    navLinkModal(modal) {
-        let linkModal = this.navigationLinks().eq(0);
-        if (modal == 'Home') linkModal = this.navigationLinks().eq(0);
-        if (modal == 'Contact') linkModal = this.navigationLinks().eq(1);
-        if (modal == 'About us') linkModal = this.navigationLinks().eq(2);
-        if (modal == 'Log in') linkModal = this.navigationLinks().eq(4);
-        if (modal == 'Sign up') linkModal = this.navigationLinks().eq(7);
-
-        return linkModal;
+    navigationLinks(link) {
+        return cy.get(link);
     }
 
     categories(type) {
         return cy.contains(type);
+    }
+
+    clickCategories(type) {
+        return cy.get(type).click();
+    }
+
+    items() {
+        return cy.get(ITEMS)
     }
 
 }
